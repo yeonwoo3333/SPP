@@ -1,0 +1,19 @@
+.form_item {
+  margin: 10px;
+}
+
+.form_item input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 포커스 상태일 때 */
+.form_item.focus input {
+  border-color: blue;
+}
+
+/* 에러 상태일 때 */
+.form_item.error input {
+  border-color: red;
+}
