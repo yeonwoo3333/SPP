@@ -29,7 +29,7 @@ function CheckboxList({ options, title, selected,onChange  }) {
     // };
 
     return (
-        <div>
+        <div className="checkbox-list-container">
             <h3>{title}</h3>
             <div className='detailArea'>
                 <div className='detailWrap'>
@@ -43,11 +43,14 @@ function CheckboxList({ options, title, selected,onChange  }) {
                                                 type="checkbox"
                                                 className='inp_chk'
                                                 name={option.value}
-                                                checked={!!selected[option.value]}
+                                                // checked={!!selected[option.value]} 0524_현재 수정 중
+                                                checked={selected === option.value}
+
+                                                onChange={()=> onChange(option.value)}
                                                 // onChange={handleChange}
-                                                onChange={(e) => onChange(option.value, e.target.checked)}
+                                                // onChange={(e) => onChange(option.value, e.target.checked)} 0524_현재수정중
                                             />
-                                            {option.label}
+                                            {option.label} ({option.count})
                                         </label>
                                     </li>
                                 ))}

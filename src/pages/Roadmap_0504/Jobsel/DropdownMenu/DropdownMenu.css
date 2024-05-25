@@ -1,3 +1,16 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 화면 전체 높이에서 가운데 정렬 */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
 .Btn_next {
     position: absolute;
@@ -14,3 +27,5 @@
 .Btn_next:active {
     background-color: #76de85; /* 더 어두운 색으로 변경 */
 }
+
+

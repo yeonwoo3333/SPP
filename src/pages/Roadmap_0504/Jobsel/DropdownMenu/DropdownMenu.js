@@ -18,30 +18,41 @@ function App() {
         // 문제점 1 해당 코드를 컴포넌트화 할 수 있는가?
     ];
 
-    const [selected, setSelected] = useState({});
+    // ------------------------------------------------------------
+    // const [selected, setSelected] = useState({});
 
-    const handleCheckboxChange = (value, isChecked) => {
-        setSelected(prev => ({
-            ...prev,
-            [value]: isChecked
-        }));
+    // const handleCheckboxChange = (value, isChecked) => {
+    //     setSelected(prev => ({
+    //         ...prev,
+    //         [value]: isChecked
+    //     }));
+    // };
+
+    // // isSelected 계산
+    // const isSelected = Object.values(selected).some(value => value);
+
+    // ------------------------------------------------------------
+
+    const [selected, setSelected] = useState('');
+
+    const handleCheckboxChange = (value) => {
+        setSelected(prev => (prev === value ? '' : value));
     };
 
-    // isSelected 계산
-    const isSelected = Object.values(selected).some(value => value);
+    const isSelected = Boolean(selected);
 
     return (
-        <div>
+        <div className="app-container">
             <CheckboxList 
                 options={categories} 
                 title="카테고리" 
                 selected={selected} 
                 onChange={handleCheckboxChange} 
             />
-            <div>
+            <div className="button-container">
                 {/* 버튼은 최소 하나의 체크박스가 선택되었을 때만 활성화 */}
-                <button className='Btn_next' disabled={!isSelected}>
-                    아니왜안보이지??
+                <button className={`Btn_next ${isSelected ? '' : 'disabled'}`} disabled={!isSelected}>
+                    다음
                 </button>
             </div>  
         </div>
