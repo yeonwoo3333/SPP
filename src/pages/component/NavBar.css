@@ -1,36 +1,47 @@
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff; /* Change as needed */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional */
-  z-index: 1000; /* High z-index to stay on top */
-  transition: background-color 0.3s;
+  position: fixed; /* 고정된 위치 */
+  top: 0; /* 상단에 위치 */
+  left: 0; /* 왼쪽에 위치 */
+  height: 10vh;
+  width: 100%; /* 너비를 100%로 설정 */
+  background-color: #fff; /* 필요에 따라 배경색 변경 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 선택사항: 그림자 효과 */
+  z-index: 1000; /* 높은 z-index로 맨 위에 위치하도록 설정 */
+  transition: background-color 0.3s; /* 배경색 변경 시 부드러운 전환 효과 */
+  display: flex; /* flexbox 사용 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between; /* 요소들 사이에 공간 균등 배분 */
 }
 
 .navbar-scrolled {
-  background-color: rgba(0, 0, 0, 0.8); /* Change as needed */
+  background-color: rgba(0, 0, 0, 0.8); /* 필요에 따라 배경색 변경 (스크롤 시) */
+  color: rgb(253,208,248);; /* 스크롤 시 글자색을 흰색으로 변경 */
+
 }
 
 .navbar-logo {
-  float: left;
-  padding: 15px;
+  float: left; /* 왼쪽으로 정렬 */
+  padding: 15px; /* 패딩 설정 */
 }
 
 .navbar-links {
+  display: flex; /* flexbox 사용 */
+  justify-content: center; /* 가로 중앙 정렬 */
   list-style: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .navbar-links li {
-  float: right;
-  padding: 15px;
+  float: right; /* 오른쪽으로 정렬 */
+  padding: 15px; /* 패딩 설정 */
 }
 
 .navbar-links li a {
-  color: #333; /* Change as needed */
-  text-decoration: none;
+  color: #333; /* 필요에 따라 텍스트 색상 변경 */
+  text-decoration: none; /* 텍스트 장식 없음 */
+}
+
+.navbar-logo, .navbar-links li a {
+  color: inherit; /* 상위 요소의 색상 상속 */
 }
