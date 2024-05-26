@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../component/NavBar';
 import '../Main.css';
 import './Non_login.css';
+import NonLoginVideo from '../Image/Non_Login_video.mp4';
 
 // 화면 이미지
 import IntroductionImage from '../Image/main_page.jpg';
@@ -12,7 +13,9 @@ const Main = () => {
       <NavBar />
       
       <div className="image-container">
-        <img src={IntroductionImage} alt="대표 이미지" />
+        <video src={NonLoginVideo} alt="대표 영상" autoPlay loop muted>
+          Your browser does not support the video tag.
+        </video>
       </div>
       
       <div className="main-content">

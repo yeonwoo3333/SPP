@@ -1,21 +1,22 @@
 .image-container {
   text-align: center;
   position: fixed;
-  top: 45%; /* 이미지를 화면 중앙보다 조금 위에 위치 */
+  top: 50%; /* 이미지를 화면 중앙보다 조금 위에 위치 */
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60vh;
+  width: 100%;
+  height: 100vh;
   z-index: -1;
   overflow: hidden;
 }
 
-.image-container img {
+.image-container img, .image-container video {
   padding: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 
 .main-content {
   position: absolute;

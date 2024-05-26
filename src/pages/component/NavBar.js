@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import LogoIcon from "../Image/logo_4.png"
+import NavBarLogo from 'D:/V_SPP/src/pages/Image/logo_4.png';  // 이미지 파일의 정확한 경로를 지정
 import './NavBar.css';
 
 const NavBar = () => {
@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <nav className={`navbar ${scrollPosition > 50 ? 'navbar-scrolled' : ''}`}>
       {/* Your NavBar content here */}
-      <div className="navbar-logo">Logo</div>
+      <div className="navbar-logo"><img src={NavBarLogo} alt="Logo" /></div>
       <ul className="navbar-links">
       <div className="Main_Top_Bar_H_right">
           <li>
