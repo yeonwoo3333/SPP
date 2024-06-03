@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import NavBarLogo from 'D:/V_SPP/src/pages/Image/logo_4.png';  // 이미지 파일의 정확한 경로를 지정
+import NavBarLogo from '../Image/logo_4.png';  // 이미지 파일의 정확한 경로를 지정
 import './NavBar.css';
 
 const NavBar = () => {
@@ -9,7 +9,8 @@ const NavBar = () => {
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
-  };
+  
+};
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -18,10 +19,17 @@ const NavBar = () => {
     };
   }, []);
 
+    // 페이지 새로고침 함수
+    const refreshPage = () => {
+      window.location.reload();
+    };
+  
   return (
     <nav className={`navbar ${scrollPosition > 50 ? 'navbar-scrolled' : ''}`}>
       {/* Your NavBar content here */}
-      <div className="navbar-logo"><img src={NavBarLogo} alt="Logo" /></div>
+      <Link to="/">
+            <img src={NavBarLogo} alt="Home" style={{width: '200px', height: '60px', margin: '15px'}} onClick={refreshPage} /> {/* 이미지 크기 조절 */}
+      </Link>      
       <ul className="navbar-links">
       <div className="Main_Top_Bar_H_right">
           <li>

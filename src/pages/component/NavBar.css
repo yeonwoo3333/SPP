@@ -21,7 +21,8 @@
 
 .navbar-logo {
   float: left; /* 왼쪽으로 정렬 */
-  padding: 15px; /* 패딩 설정 */
+  padding: 30px; /* 패딩 설정 */
+  margin-left: 0;
 }
 
 .navbar-links {
