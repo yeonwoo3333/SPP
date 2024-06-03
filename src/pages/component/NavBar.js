@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import NavBarLogo from 'D:/V_SPP/src/pages/Image/logo_4.png';  // 이미지 파일의 정확한 경로를 지정
+import NavBarLogo from '../Image/logo_4.png';  // 이미지 파일의 정확한 경로를 지정
 import './NavBar.css';
 
 const NavBar = () => {
