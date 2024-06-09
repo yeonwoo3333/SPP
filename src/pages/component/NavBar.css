@@ -1,40 +1,48 @@
-/* 메뉴바 전체 스타일 */
-.non_login_Main {
-    /* background-color: #333; 메뉴바 배경 색상 */
-    background-color: black;
-    padding: 0.5rem;
-  }
-  
-  .non_login_Main ul {
-    list-style-type: none; /* 목록 스타일 제거 */
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  .non_login_Main li {
-    float: left; /* 항목을 가로로 배열 */
-  }
-  
-  .non_login_Main li a {
-    display: block; /* 링크를 블록 요소로 만들어 추가적인 스타일링 가능 */
-    color: rgb(253,208,248);
-    font-weight: bold;
-    -webkit-text-stroke-width: 0.2px; /* 테두리 두께 */
-    -webkit-text-stroke-color: white; /* 테두리 색상 */
-    text-align: center; /* 텍스트 가운데 정렬 */
-    padding: 14px 16px; /* 상하좌우 패딩 */
-    text-decoration: none; /* 밑줄 제거 */
-  }
-  
-  /* 오른쪽 메뉴 스타일링 */
-  .Main_Top_Bar_H_right {
-    float: right; /* 오른쪽 정렬 */
-  }
-  
-  /* 링크에 마우스 호버 시 스타일 */
-  .non_login_Main li a:hover {
-    background-color: #555; /* 배경 색상 변경 */
-  }
-  
-  
+.navbar {
+  position: fixed; /* 고정된 위치 */
+  top: 0; /* 상단에 위치 */
+  left: 0; /* 왼쪽에 위치 */
+  height: 10vh;
+  width: 100%; /* 너비를 100%로 설정 */
+  background-color: #fff; /* 필요에 따라 배경색 변경 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 선택사항: 그림자 효과 */
+  z-index: 1000; /* 높은 z-index로 맨 위에 위치하도록 설정 */
+  transition: background-color 0.3s; /* 배경색 변경 시 부드러운 전환 효과 */
+  display: flex; /* flexbox 사용 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between; /* 요소들 사이에 공간 균등 배분 */
+}
+
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* 필요에 따라 배경색 변경 (스크롤 시) */
+  color: rgb(253,208,248);; /* 스크롤 시 글자색을 흰색으로 변경 */
+
+}
+
+.navbar-logo {
+  float: left; /* 왼쪽으로 정렬 */
+  padding: 30px; /* 패딩 설정 */
+  margin-left: 0;
+}
+
+.navbar-links {
+  display: flex; /* flexbox 사용 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  float: right; /* 오른쪽으로 정렬 */
+  padding: 15px; /* 패딩 설정 */
+}
+
+.navbar-links li a {
+  color: #333; /* 필요에 따라 텍스트 색상 변경 */
+  text-decoration: none; /* 텍스트 장식 없음 */
+}
+
+.navbar-logo, .navbar-links li a {
+  color: inherit; /* 상위 요소의 색상 상속 */
+}

@@ -1,7 +1,7 @@
 {
   "name": "spp-project",
   "version": "0.1.0",
-  "private": true,
+  "private": true, 
   "dependencies": {
     "@fullcalendar/core": "^6.1.14",
     "@fullcalendar/daygrid": "^6.1.14",
