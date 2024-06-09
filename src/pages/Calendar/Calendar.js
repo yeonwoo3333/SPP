@@ -5,16 +5,25 @@ import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 
 function App() {
     return (
-    <div className="App">
-        <FullCalendar
-        plugins={[dayGridPlugin]}
-        initialView="dayGridMonth"
-        events={[
-            { title: 'event 1', date: '2023-06-01' },
-            { title: 'event 2', date: '2023-06-02' }
-        ]}
-        />
+    <div>
+        <div className='Quest'>
+        
+        </div>
+
+        <div className="App">
+            <FullCalendar
+            plugins={[dayGridPlugin]}
+            initialView="dayGridMonth"
+            events={[
+                { title: 'event 1', date: '2024-06-01' },
+                { title: 'event 2', date: '2024-06-02' }
+            ]}
+            />
+        </div>
+
+
     </div>
+
     );
 }
 
