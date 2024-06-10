@@ -35,7 +35,7 @@ const Main = () => {
         
         <section className="testimonials">
           <h2>고객 후기</h2>
-          <p>"플래너 덕분에 좋았다~!" - 이모씨</p>
+          <p>"플래너 덕분에 좋았다~!" - 연우</p>
         </section>
         
         <section className="additional-info">
