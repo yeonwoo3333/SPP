@@ -6,20 +6,20 @@ function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
-  const navigate = useNavigate(); // useNavigate 훅 사용
+  // const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate(); 
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (rememberMe) {
-      localStorage.setItem('username', username);
-      localStorage.setItem('password', password);
-    } else {
-      localStorage.removeItem('username');
-      localStorage.removeItem('password');
-    }
-    navigate('/nextPage'); 
-  };
+ const handleSubmit = (event) => {
+  event.preventDefault();
+ //   if (rememberMe) {
+//    localStorage.setItem('username', username);
+ //     localStorage.setItem('password', password);
+ //   } else {
+  //    localStorage.removeItem('username');
+ //     localStorage.removeItem('password');
+  //  }
+  //  navigate('/nextPage'); 
+ };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -28,11 +28,11 @@ function Login() {
     } else if (name === 'password') {
       setPassword(value);
     }
-  };
+   }; 
 
-  const handleRememberMeChange = (event) => {
-    setRememberMe(event.target.checked);
-  };
+  // const handleRememberMeChange = (event) => {
+  // setRememberMe(event.target.checked);
+  // }; 
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -71,15 +71,15 @@ function Login() {
                 </button>
               </div>
             </div>
-            <div className="remember-me">
+            { /* <div className="remember-me">
               <input
                 type="checkbox"
                 id="rememberMe"
-                checked={rememberMe}
-                onChange={handleRememberMeChange}
+                // checked={rememberMe}
+               // onChange={handleRememberMeChange}
               />
-              <label htmlFor="rememberMe">자동 로그인</label>
-            </div>
+             <label htmlFor="rememberMe">자동 로그인</label>
+            </div> */ }
             <div className="submit-group">
               <input type="submit" value="Login" />
             </div>
@@ -88,15 +88,10 @@ function Login() {
               <Link to="/Join_page">회원가입</Link>
             </div>
           </form>
-          <div className="social-buttons">
-            <button className="kakao">카카오 로그인</button>
-            <button className="google">구글 로그인</button>
-            <button className="apple">애플 로그인</button>
-          </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Login;
