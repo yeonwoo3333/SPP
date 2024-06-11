@@ -9,17 +9,17 @@ function Login() {
   // const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate(); 
 
- const handleSubmit = (event) => {
-  event.preventDefault();
- //   if (rememberMe) {
-//    localStorage.setItem('username', username);
- //     localStorage.setItem('password', password);
- //   } else {
-  //    localStorage.removeItem('username');
- //     localStorage.removeItem('password');
-  //  }
-  //  navigate('/nextPage'); 
- };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //   if (rememberMe) {
+    //    localStorage.setItem('username', username);
+    //     localStorage.setItem('password', password);
+    //   } else {
+    //    localStorage.removeItem('username');
+    //     localStorage.removeItem('password');
+    //   }
+    navigate('/nextPage'); 
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -28,7 +28,7 @@ function Login() {
     } else if (name === 'password') {
       setPassword(value);
     }
-   }; 
+  }; 
 
   // const handleRememberMeChange = (event) => {
   // setRememberMe(event.target.checked);
