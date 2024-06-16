@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+}
+
+.quest {
+  width: 50px; /* Default width when visible */
+  /* padding: 20px; */
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
+  
+}
+
+.quest-test{
+  text-align: center;
+}
+
+.quest.hidden {
+  overflow: hidden;
+}
+
+.calendar {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.dashboard {
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  background-color: #f7f7f7;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}

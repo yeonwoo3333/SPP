@@ -78,7 +78,7 @@ function Login() {
                 // checked={rememberMe}
                // onChange={handleRememberMeChange}
               />
-             <label htmlFor="rememberMe">자동 로그인</label>
+            <label htmlFor="rememberMe">자동 로그인</label>
             </div> */ }
             <div className="submit-group">
               <input type="submit" value="Login" />
