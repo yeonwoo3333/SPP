@@ -47,6 +47,9 @@ const NavBar = () => {
           <li>
             <Link to ="TEST2_page">테스트2화면</Link>
           </li>
+          <li>
+            <Link to ="PlanQ_test">홀랜드 직업 흥미 검사</Link>
+          </li>
         </div>
       </ul>
     </nav>
