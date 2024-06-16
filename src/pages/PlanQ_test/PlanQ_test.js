@@ -99,7 +99,8 @@ const questions = [
 { text: "세밀하고 꼼꼼하다", type: "관습형" },
 { text: "내 마음대로 말하는 것보다 원칙을 지키며 일하고 싶다", type: "관습형" }
 ];
-function App() {
+
+function PlanQ_test() {
     const [selectedAnswers, setSelectedAnswers] = useState(Array(Math.ceil(questions.length / 24)).fill(null).map(() => new Set()));
     const [selectedTypes, setSelectedTypes] = useState({});
     const [currentPage, setCurrentPage] = useState(0);
@@ -144,7 +145,7 @@ function App() {
     const isNextPageDisabled = selectedAnswers[currentPage].size === 0;
 
     return (
-    <div className="container">
+    <div className="planq-container">
         <button
         className="prev-button"
         onClick={handlePrevPage}
@@ -178,4 +179,4 @@ function App() {
     );
 }
 
-export default App;
+export default PlanQ_test;
